@@ -1,0 +1,4 @@
+Rxx = nan
+Rxy = nan
+Time Rxx = 0.796875
+Time Rxy = 139.484375
