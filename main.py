@@ -3,9 +3,19 @@ import random
 from math import sin
 import matplotlib.pyplot as plt
 import time
-n = 10  # harmonics
+
+# count = 10
+# autocor = 0
+# cov = 0
+# time_rxx = 0
+# time_rxy = 0
+
+
+n = 1000  # harmonics
 w = 900 # max frequency
 N = 256  # number of discrete signals
+
+# for cc in range(count):
 temp = w / (n - 1)
 # Frequency
 def W(n, w):
@@ -30,7 +40,7 @@ for n in range(n):
     phi = random.randint(-360, 360)
     for t in range(N):
         harmonics[t] += A * sin(w_val[n] * t + phi)
-plt.figure(figsize=(30, 20))
+plt.figure(figsize=(10, 5))
 plt.plot(harmonics, 'g')
 plt.grid(True)
 plt.show()
@@ -47,7 +57,7 @@ for n in range(n):
     phi = random.randint(-360, 360)
     for t in range(N):
         y[t] += A * sin(w_val[n] * t + phi)
-plt.figure(figsize=(30, 20))
+plt.figure(figsize=(10, 5))
 plt.plot(y)
 plt.grid(True)
 plt.show()
